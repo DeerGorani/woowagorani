@@ -14,7 +14,7 @@ body:
       description: PR 또는 코드리뷰 댓글 링크를 붙여넣어 주세요
       placeholder: "https://github.com/.../pull/123#discussion_r..."
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: review-content
