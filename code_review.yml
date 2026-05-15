@@ -1,0 +1,54 @@
+title: "[코드리뷰] "
+labels: ["Code Review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 👀 코드리뷰 공유
+        받은 코드리뷰를 팀원들과 함께 나눠봐요!
+
+  - type: input
+    id: review-link
+    attributes:
+      label: 🔗 코드리뷰 링크
+      description: PR 또는 코드리뷰 댓글 링크를 붙여넣어 주세요
+      placeholder: "https://github.com/.../pull/123#discussion_r..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: review-content
+    attributes:
+      label: 📝 리뷰 내용
+      description: 리뷰 내용을 요약하거나 그대로 붙여넣어 주세요
+      placeholder: |
+        리뷰어가 이런 부분을 지적했어요.
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 💬 공유 배경 / 내 생각
+      description: 왜 이 리뷰를 공유하는지, 내 생각이나 궁금한 점을 적어주세요
+      placeholder: |
+        이 리뷰를 받고 나서 이런 생각이 들었어요...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: purpose
+    attributes:
+      label: 🎯 공유 목적 (복수 선택 가능)
+      options:
+        - label: ❓ 궁금증 해소 — 리뷰 내용이 이해가 안 돼요, 같이 파봐요
+        - label: 💡 좋은 리뷰 공유 — 인사이트 있는 리뷰라 팀원들도 알면 좋겠어요
+        - label: 🗣️ 관점 토론 — 리뷰어 의견에 동의/비동의, 같이 논의해봐요
+        - label: 📚 학습 정리 — 리뷰 계기로 공부한 내용을 정리했어요
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        > 좋은 리뷰 하나가 팀 전체를 성장시킵니다 🚀
