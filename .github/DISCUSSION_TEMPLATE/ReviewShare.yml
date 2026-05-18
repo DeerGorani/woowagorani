@@ -1,4 +1,4 @@
-title: "[코드리뷰] "
+title: "[리뷰공유] "
 labels: ["Code Review"]
 body:
   - type: markdown
@@ -36,16 +36,6 @@ body:
         이 리뷰를 받고 나서 이런 생각이 들었어요...
     validations:
       required: false
-
-  - type: checkboxes
-    id: purpose
-    attributes:
-      label: 🎯 공유 목적 (복수 선택 가능)
-      options:
-        - label: ❓ 궁금증 해소 — 리뷰 내용이 이해가 안 돼요, 같이 파봐요
-        - label: 💡 좋은 리뷰 공유 — 인사이트 있는 리뷰라 팀원들도 알면 좋겠어요
-        - label: 🗣️ 관점 토론 — 리뷰어 의견에 동의/비동의, 같이 논의해봐요
-        - label: 📚 학습 정리 — 리뷰 계기로 공부한 내용을 정리했어요
 
   - type: markdown
     attributes:
