@@ -1,0 +1,64 @@
+title: "[Q&A] "
+labels: ["Q&A"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ❓ 궁금증 해소
+        리뷰 내용이나 자료가 이해가 안 되면 같이 파봐요!
+
+  - type: input
+    id: question-topic
+    attributes:
+      label: 📌 질문 주제
+      description: 어떤 부분이 궁금한지 한 줄로 적어주세요
+      placeholder: "예) JPA fetch join이랑 N+1이 어떤 관계인지 모르겠어요"
+    validations:
+      required: true
+
+  - type: textarea
+    id: question-content
+    attributes:
+      label: 🤔 궁금한 내용
+      description: 무엇이 이해가 안 되는지 최대한 자세히 적어주세요
+      placeholder: |
+        이 부분까지는 이해했는데,
+        이 부분부터 이해가 안 돼요...
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 🔍 시도해본 것
+      description: 질문 전에 찾아보거나 시도해본 것들을 적어주세요
+      placeholder: |
+        - 구글링 해봤는데...
+        - 공식 문서 봤는데...
+    validations:
+      required: false
+
+  - type: input
+    id: reference-link
+    attributes:
+      label: 🔗 관련 링크
+      description: 관련된 PR, 코드리뷰 댓글, 자료 링크가 있으면 첨부해주세요
+      placeholder: "https://github.com/.../pull/123#discussion_r..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: question-type
+    attributes:
+      label: 🎯 질문 유형 (복수 선택 가능)
+      options:
+        - label: 💻 코드/구현 관련
+        - label: 📖 개념 이해 관련
+        - label: 🗣️ 코드리뷰 내용 관련
+        - label: 🏗️ 설계/아키텍처 관련
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        > 질문하는 것도 실력입니다. 편하게 물어봐요 😊
