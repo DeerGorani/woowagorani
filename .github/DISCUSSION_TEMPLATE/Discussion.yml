@@ -1,0 +1,63 @@
+title: "[토론] "
+labels: ["토론"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🗣️ 관점 토론
+        리뷰어 의견에 동의/비동의, 같이 논의해봐요!
+
+  - type: input
+    id: discussion-topic
+    attributes:
+      label: 📌 토론 주제
+      description: 어떤 주제로 토론하고 싶은지 한 줄로 적어주세요
+      placeholder: "예) Service 레이어에서 DTO 변환을 해야 할까요, Controller에서 해야 할까요?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 📝 배경 / 상황 설명
+      description: 어떤 맥락에서 이 주제가 나왔는지 설명해주세요
+      placeholder: |
+        코드리뷰에서 이런 의견이 나왔어요...
+        혹은 이런 상황에서 고민이 생겼어요...
+    validations:
+      required: true
+
+  - type: textarea
+    id: my-opinion
+    attributes:
+      label: 💬 내 의견
+      description: 현재 본인의 생각이나 입장을 적어주세요
+      placeholder: |
+        저는 이렇게 생각해요. 왜냐하면...
+    validations:
+      required: true
+
+  - type: input
+    id: reference-link
+    attributes:
+      label: 🔗 관련 링크
+      description: 관련된 PR, 코드리뷰 댓글, 참고 자료 링크가 있으면 첨부해주세요
+      placeholder: "https://github.com/.../pull/123#discussion_r..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: discussion-type
+    attributes:
+      label: 🎯 토론 유형 (복수 선택 가능)
+      options:
+        - label: ⚔️ 코드리뷰 의견 동의/비동의
+        - label: 🏗️ 설계/아키텍처 방향
+        - label: 📖 개념/관점 차이
+        - label: ✅ 팀 컨벤션 결정
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        > 다양한 관점이 모일수록 더 좋은 결론이 나옵니다 🚀
