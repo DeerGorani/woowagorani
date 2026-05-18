@@ -1,0 +1,65 @@
+title: "[학습정리] "
+labels: ["학습정리"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📚 학습 내용 공유
+        공부하고 정리한 내용을 팀원들과 함께 나눠봐요!
+
+  - type: input
+    id: study-topic
+    attributes:
+      label: 📌 학습 주제
+      description: 어떤 주제를 공부했는지 한 줄로 적어주세요
+      placeholder: "예) JPA N+1 문제, TCP 3-way handshake, BFS/DFS 비교"
+    validations:
+      required: true
+
+  - type: textarea
+    id: study-content
+    attributes:
+      label: 🧠 핵심 내용 정리
+      description: 공부한 내용을 자유롭게 정리해주세요 (개념 설명, 코드 예시 등)
+      placeholder: |
+        공부한 내용을 정리해주세요.
+        코드 블록, 그림 설명 등 자유롭게!
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 🔗 참고 자료
+      description: 도움받은 링크, 책, 강의 등을 남겨주세요
+      placeholder: |
+        - https://...
+        - 책 이름, 강의명 등
+    validations:
+      required: false
+
+  - type: textarea
+    id: thoughts
+    attributes:
+      label: 💬 느낀 점 / 추가로 공부할 것
+      description: 공부하면서 느낀 점이나 더 파보고 싶은 것들을 적어주세요
+      placeholder: |
+        이걸 공부하고 나서 이런 생각이 들었어요...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: motivation
+    attributes:
+      label: 🎯 학습 계기 (복수 선택 가능)
+      options:
+        - label: 👀 코드리뷰에서 배운 것
+        - label: 🗣️ 스터디 중 나온 개념
+        - label: 🤔 개인적으로 궁금했던 것
+        - label: 📝 면접 준비
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        > 함께 공부하면 더 빨리 성장합니다 🚀
