@@ -1,55 +1,80 @@
 title: "[Q&A] "
 labels: ["Q&A"]
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## ❓ 궁금증 해소
-        리뷰 내용이나 자료가 이해가 안 되면 같이 파봐요!
 
-  - type: textarea
-    id: question-content
-    attributes:
-      label: 🤔 궁금한 내용
-      description: 무엇이 이해가 안 되는지 최대한 자세히 적어주세요
-      placeholder: |
-        이 부분까지는 이해했는데,
-        이 부분부터 이해가 안 돼요...
-    validations:
-      required: true
+* type: markdown
+  attributes:
+  value: |
+  ## ❓ 질문과 고민 나누기
+  이해가 안 되는 내용, 의견을 듣고 싶은 내용, 같이 고민해보고 싶은 내용을 자유롭게 남겨주세요.
 
-  - type: textarea
-    id: tried
-    attributes:
-      label: 🔍 시도해본 것
-      description: 질문 전에 찾아보거나 시도해본 것들을 적어주세요
-      placeholder: |
-        - 구글링 해봤는데...
-        - 공식 문서 봤는데...
-    validations:
-      required: false
+  ```
+  코드리뷰, 공식 문서, 학습 자료, 구현 중 생긴 고민, 설계에 대한 의견 요청 모두 괜찮아요.
+  ```
 
-  - type: input
-    id: reference-link
-    attributes:
-      label: 🔗 관련 링크
-      description: 관련된 PR, 코드리뷰 댓글, 자료 링크가 있으면 첨부해주세요
-      placeholder: "https://github.com/.../pull/123#discussion_r..."
-    validations:
-      required: false
+* type: textarea
+  id: question-content
+  attributes:
+  label: 🤔 질문 / 고민 내용
+  description: 어떤 부분이 궁금한지, 어떤 의견을 듣고 싶은지 최대한 자세히 적어주세요.
+  placeholder: |
+  예시)
+  - 이 리뷰 코멘트가 어떤 의미인지 잘 모르겠어요.
+  - 이런 방식으로 구현해도 괜찮을지 의견을 듣고 싶어요.
+  - A 방식과 B 방식 중 어떤 선택이 더 나을지 고민돼요.
+  - 공식 문서를 봤는데 이 부분이 잘 이해되지 않아요.
+  validations:
+  required: true
 
-  - type: checkboxes
-    id: question-type
-    attributes:
-      label: 🎯 질문 유형 (복수 선택 가능)
-      options:
-        - label: 💻 코드/구현 관련
-        - label: 📖 개념 이해 관련
-        - label: 🗣️ 코드리뷰 내용 관련
-        - label: 🏗️ 설계/아키텍처 관련
+* type: textarea
+  id: context
+  attributes:
+  label: 🧩 배경 / 상황
+  description: 질문이 나온 배경이나 현재 상황을 적어주세요.
+  placeholder: |
+  예시)
+  - 현재 어떤 기능을 구현 중인지
+  - 어떤 리뷰를 받았는지
+  - 어떤 선택지 사이에서 고민 중인지
+  - 왜 이 부분이 헷갈렸는지
+  validations:
+  required: false
 
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        > 질문하는 것도 실력입니다. 편하게 물어봐요 😊
+* type: textarea
+  id: tried
+  attributes:
+  label: 🔍 찾아보거나 시도해본 것
+  description: 질문 전에 찾아보거나 직접 시도해본 내용이 있다면 적어주세요.
+  placeholder: |
+  예시)
+  - 공식 문서를 읽어봤어요.
+  - 기존 코드를 따라가 봤어요.
+  - A 방식으로 구현해봤는데 이런 문제가 있었어요.
+  validations:
+  required: false
+
+* type: input
+  id: reference-link
+  attributes:
+  label: 🔗 관련 링크
+  description: 관련된 PR, 코드리뷰 댓글, 공식 문서, 참고 자료 링크가 있으면 첨부해주세요.
+  placeholder: "https://github.com/.../pull/123#discussion_r..."
+  validations:
+  required: false
+
+* type: checkboxes
+  id: question-type
+  attributes:
+  label: 🎯 질문 유형 (복수 선택 가능)
+  options:
+  - label: 💻 코드/구현 관련
+  - label: 📖 개념 이해 관련
+  - label: 🗣️ 코드리뷰 내용 관련
+  - label: 🏗️ 설계/아키텍처 관련
+  - label: 💬 의견 요청 / 함께 고민
+
+* type: markdown
+  attributes:
+  value: |
+  ---
+  > 완벽히 정리된 질문이 아니어도 괜찮아요. 같이 정리하면서 파봐요 😊
