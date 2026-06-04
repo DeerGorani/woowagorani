@@ -1,54 +1,72 @@
 title: "[토론] "
 labels: ["토론"]
+
 body:
   - type: markdown
     attributes:
       value: |
         ## 🗣️ 관점 토론
-        리뷰어 의견에 동의/비동의, 같이 논의해봐요!
+
+        설계, 구현, 코드리뷰, 학습 내용 등 다양한 주제에 대해 의견을 나눠봐요.
+
+  - type: textarea
+    id: topic
+    attributes:
+      label: 🎯 토론 주제
+      description: 어떤 주제에 대해 이야기해보고 싶은지 적어주세요.
+      placeholder: |
+        예시)
+        - Service 계층에서 검증하는 것이 맞을까?
+        - Repository는 인터페이스가 꼭 필요할까?
+        - 이 리뷰 의견에 동의하는가?
+    validations:
+      required: true
 
   - type: textarea
     id: background
     attributes:
       label: 📝 배경 / 상황 설명
-      description: 어떤 맥락에서 이 주제가 나왔는지 설명해주세요
+      description: 어떤 맥락에서 이 주제가 나왔는지 설명해주세요.
       placeholder: |
-        코드리뷰에서 이런 의견이 나왔어요...
-        혹은 이런 상황에서 고민이 생겼어요...
+        예시)
+        - 코드리뷰에서 이런 의견을 받았어요.
+        - 구현하다가 이런 고민이 생겼어요.
+        - 팀 내에서 의견이 갈렸어요.
     validations:
       required: true
 
   - type: textarea
     id: my-opinion
     attributes:
-      label: 💬 내 의견
-      description: 현재 본인의 생각이나 입장을 적어주세요
+      label: 💬 현재 생각 (선택)
+      description: 현재 본인의 생각이 있다면 적어주세요.
       placeholder: |
-        저는 이렇게 생각해요. 왜냐하면...
+        저는 현재 이렇게 생각하고 있어요.
+        하지만 다른 의견도 궁금합니다.
     validations:
-      required: true
+      required: false
 
   - type: input
     id: reference-link
     attributes:
       label: 🔗 관련 링크
-      description: 관련된 PR, 코드리뷰 댓글, 참고 자료 링크가 있으면 첨부해주세요
+      description: PR, 코드리뷰, 공식 문서, 참고 자료 등이 있다면 첨부해주세요.
       placeholder: "https://github.com/.../pull/123#discussion_r..."
-    validations:
-      required: false
 
   - type: checkboxes
     id: discussion-type
     attributes:
       label: 🎯 토론 유형 (복수 선택 가능)
       options:
-        - label: ⚔️ 코드리뷰 의견 동의/비동의
-        - label: 🏗️ 설계/아키텍처 방향
-        - label: 📖 개념/관점 차이
-        - label: ✅ 팀 컨벤션 결정
+        - label: ⚔️ 코드리뷰 의견
+        - label: 🏗️ 설계 / 아키텍처
+        - label: 💻 구현 방식
+        - label: 📖 개념 / 관점 차이
+        - label: 🤝 팀 컨벤션
+        - label: 🔄 트레이드오프 논의
 
   - type: markdown
     attributes:
       value: |
-        ---
-        > 다양한 관점이 모일수록 더 좋은 결론이 나옵니다 🚀
+        💡 꼭 결론이 정리된 상태가 아니어도 괜찮아요.
+        다양한 관점을 듣고 함께 고민해봐요.
