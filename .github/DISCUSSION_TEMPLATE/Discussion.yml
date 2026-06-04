@@ -7,15 +7,6 @@ body:
         ## 🗣️ 관점 토론
         리뷰어 의견에 동의/비동의, 같이 논의해봐요!
 
-  - type: input
-    id: discussion-topic
-    attributes:
-      label: 📌 토론 주제
-      description: 어떤 주제로 토론하고 싶은지 한 줄로 적어주세요
-      placeholder: "예) Service 레이어에서 DTO 변환을 해야 할까요, Controller에서 해야 할까요?"
-    validations:
-      required: true
-
   - type: textarea
     id: background
     attributes:
