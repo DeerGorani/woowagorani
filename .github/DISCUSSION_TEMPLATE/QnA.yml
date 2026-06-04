@@ -7,15 +7,6 @@ body:
         ## ❓ 궁금증 해소
         리뷰 내용이나 자료가 이해가 안 되면 같이 파봐요!
 
-  - type: input
-    id: question-topic
-    attributes:
-      label: 📌 질문 주제
-      description: 어떤 부분이 궁금한지 한 줄로 적어주세요
-      placeholder: "예) JPA fetch join이랑 N+1이 어떤 관계인지 모르겠어요"
-    validations:
-      required: true
-
   - type: textarea
     id: question-content
     attributes:
