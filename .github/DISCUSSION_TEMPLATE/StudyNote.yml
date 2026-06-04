@@ -6,16 +6,7 @@ body:
       value: |
         ## 📚 학습 내용 공유
         공부하고 정리한 내용을 팀원들과 함께 나눠봐요!
-
-  - type: input
-    id: study-topic
-    attributes:
-      label: 📌 학습 주제
-      description: 어떤 주제를 공부했는지 한 줄로 적어주세요
-      placeholder: "예) JPA N+1 문제, TCP 3-way handshake, BFS/DFS 비교"
-    validations:
-      required: true
-
+        
   - type: textarea
     id: study-content
     attributes:
